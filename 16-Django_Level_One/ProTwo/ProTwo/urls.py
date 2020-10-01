@@ -18,6 +18,7 @@ from django.urls import path, include
 from AppTwo import views
 
 urlpatterns = [
+    path('', views.index, name='index'), # base url without sub-directory
     path('admin/', admin.site.urls),
-    path('apptwo/', include('AppTwo.urls')),
+    path('help/', include('AppTwo.urls')),
 ]
